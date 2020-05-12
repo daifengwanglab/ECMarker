@@ -1,9 +1,9 @@
 # ECMarker
 
-A biologically and clinically interpretable machine learning model to reveal gene expression biomarkers for classifying early cancer and predicting clinical outcomes.
+An interpretable machine learning model identifies gene expression biomarkers predicting clinical phenotypes and outcomes and reveals molecular mechanisms in the human disease
 
 ## Introduction
-ECMarker is an interpretable and scalable machine learning model to predict gene expression biomarkers for disease phenotypes and simultaneously reveal underlying regulatory mechanisms. It is built on the integration of semi- [1]and discriminative- restricted [2]Boltzmann machines, a neural network model for classification allowing lateral connections at the input gene layer. This interpretable model is scalable without needing any prior feature selection and enables directly modeling and prioritizing genes and revealing potential gene networks (from lateral connections) for the phenotypes. This model allows one to directly model and prioritize gene interactions for the classification of clinical phenotypes, revealing potential gene regulatory networks (GRNs) for different disease stages. The framework of ECMarker is depicted in the figure below: 
+ECMarker is an interpretable and scalable machine learning model to predict gene expression biomarkers for disease phenotypes and simultaneously reveal underlying gene regulatory mechanisms. It is built on the integration of semi- and discriminative- restricted Boltzmann machines [1][2], a neural network model for classification allowing lateral connections at the input gene layer. This interpretable model is scalable without needing any prior feature selection and enables directly modeling and prioritizing genes and revealing potential gene networks (from lateral connections) for the phenotypes. This model allows one to directly model and prioritize gene interactions for the classification of clinical phenotypes, revealing potential gene regulatory networks (GRNs) for different disease phenotypes (e.g., early and late cancer stages as a demo below). 
 <p align="center">
   <img width="300" height="300" src="Framework.png">
 </p>
@@ -25,7 +25,7 @@ This script need no installation, but has the following requirements:
 * disease stage data: an csv file includes the cancer stages of patients. 
 
 ### Load example data
-The example data is downloaded from the publicly accessible dataset[3] which is including gene expression data and clinical information of non-small cell lung cancer (NSCLC) patients. We grouped patients based on their tumor/node/metastasis (TMN) stages, with (I+IA+IB) as the early stage  and II, III, and IV as the late stage, then divided the dataset into training and testing datasets. The detail of data processing is intrucuded in https://www.biorxiv.org/content/10.1101/825414v1.full. 
+The example data is downloaded from the publicly accessible dataset[3] which is including gene expression data and clinical information of non-small cell lung cancer (NSCLC) patients. We grouped patients based on their tumor/node/metastasis (TMN) stages, with (I+IA+IB) as the early stage  and II, III, and IV as the late stage, then divided the dataset into training and testing datasets.  
 
 ```python
 import pandas as pd
