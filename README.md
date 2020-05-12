@@ -27,7 +27,7 @@ This script need no installation, but has the following requirements:
 ### Load example data
 The example data is downloaded from the publicly accessible dataset[2] which is including gene expression data and clinical information of non-small cell lung cancer (NSCLC) patients. We grouped patients based on their tumor/node/metastasis (TMN) stages, with (I+IA+IB) as the early stage  and II, III, and IV as the late stage, then divided the dataset into training and testing datasets. The detail of data processing is intrucuded in https://www.biorxiv.org/content/10.1101/825414v1.full. 
 
-```{python}
+```python
 import pandas as pd
 import numpy as np
 
@@ -45,7 +45,7 @@ In the Label file, 0 indicates early stage patients, 1 indicates late stage pait
 
 ### Run ECMarker
 #### Step 1: Define ECMarker model
-```{python}
+```python
 import torch
 from torch.utils.data import Dataset, TensorDataset, DataLoader
 import torch.autograd as autograd
@@ -68,7 +68,7 @@ model = GRBM(n_vis=n_vis, n_target=n_target, n_hid=n_hid, k=5).to(device)
 ```
 
 #### Step 2: Train the ECMarker with training set, then test on the testing set. 
-```{python}
+```python
 X_train, y_train, X_test, y_test = map(
     torch.tensor, (X_train, y_train, X_test, y_test)
 )
@@ -94,7 +94,7 @@ with torch.no_grad():
 ```
 
 #### Step 3: Extract biomarkers and gene network from the well-trained ECMarker
-```{python}
+```python
 # Gene Network
 gene_network = model.L
 
