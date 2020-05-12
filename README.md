@@ -25,7 +25,7 @@ This script need no installation, but has the following requirements:
 * disease stage data: an csv file includes the cancer stages of patients. 
 
 ### Load example data
-The example data is downloaded from the publicly accessible dataset[2] which is including gene expression data and clinical information of non-small cell lung cancer (NSCLC) patients. We grouped patients based on their tumor/node/metastasis (TMN) stages, with (I+IA+IB) as the early stage  and II, III, and IV as the late stage, then divided the dataset into training and testing datasets. The detail of data processing is intrucuded in https://www.biorxiv.org/content/10.1101/825414v1.full. 
+The example data is downloaded from the publicly accessible dataset[3] which is including gene expression data and clinical information of non-small cell lung cancer (NSCLC) patients. We grouped patients based on their tumor/node/metastasis (TMN) stages, with (I+IA+IB) as the early stage  and II, III, and IV as the late stage, then divided the dataset into training and testing datasets. The detail of data processing is intrucuded in https://www.biorxiv.org/content/10.1101/825414v1.full. 
 
 ```python
 import pandas as pd
@@ -117,4 +117,5 @@ late_biomarkers = dict(zip(feature_names, np.mean(attr.detach().numpy(), axis=0)
 
 ## Reference
 [1] Osindero, S. & G. Hinton. 2007a. Modeling image patches with a directed hierarchy of Markov random fields.\
-[2] Gentles, A. J., S. V. Bratman, L. J. Lee, J. P. Harris, W. Feng, R. V. Nair, D. B. Shultz, V. S. Nair, C. D. Hoang, R. B. West, S. K. Plevritis, A. A. Alizadeh & M. Diehn (2015) Integrating Tumor and Stromal Gene Expression Signatures With Clinical Indices for Survival Stratification of Early-Stage Non–Small Cell Lung Cancer. JNCI: Journal of the National Cancer Institute, 107.
+[2]Larochelle, H. & Y. Bengio. 2008. Classification using discriminative restricted Boltzmann machines. In Proceedings of the 25th international conference on Machine learning, 536–543. Helsinki, Finland: Association for Computing Machinery.\
+[3] Gentles, A. J., S. V. Bratman, L. J. Lee, J. P. Harris, W. Feng, R. V. Nair, D. B. Shultz, V. S. Nair, C. D. Hoang, R. B. West, S. K. Plevritis, A. A. Alizadeh & M. Diehn (2015) Integrating Tumor and Stromal Gene Expression Signatures With Clinical Indices for Survival Stratification of Early-Stage Non–Small Cell Lung Cancer. JNCI: Journal of the National Cancer Institute, 107.
