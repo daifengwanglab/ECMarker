@@ -3,7 +3,7 @@
 A biologically and clinically interpretable machine learning model to reveal gene expression biomarkers for classifying early cancer and predicting clinical outcomes.
 
 ## Introduction
-ECMarker is an interpretable machine learning framework to identify gene expression biomarkers for predicting early disease stage and clinical outcomes. It is built on the semi-restricted Boltzmann machine [1], a neural network model with multiple hierarchical layers. This model allows one to directly model and prioritize gene interactions for the classification of clinical phenotypes, revealing potential gene regulatory networks (GRNs) for different disease stages. The framework of ECMarker is depicted in the figure below: 
+ECMarker is an interpretable and scalable machine learning model to predict gene expression biomarkers for disease phenotypes and simultaneously reveal underlying regulatory mechanisms. It is built on the integration of semi- [1]and discriminative- restricted [2]Boltzmann machines, a neural network model for classification allowing lateral connections at the input gene layer. This interpretable model is scalable without needing any prior feature selection and enables directly modeling and prioritizing genes and revealing potential gene networks (from lateral connections) for the phenotypes. This model allows one to directly model and prioritize gene interactions for the classification of clinical phenotypes, revealing potential gene regulatory networks (GRNs) for different disease stages. The framework of ECMarker is depicted in the figure below: 
 <p align="center">
   <img width="300" height="300" src="Framework.png">
 </p>
